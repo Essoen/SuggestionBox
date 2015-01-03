@@ -1,16 +1,19 @@
-Suggestions = new Mongo.Collection("Suggestions");
+Suggestions = new Mongo.Collection('Suggestions');
+Projects = new Mongo.Collection('Projects');
+
+Session.set('selectedProject', null);
 
 if (Meteor.isClient) {
     Template.Suggestions.helpers({
         Suggestion: function() {
-            return Suggestions.find({}, {
+            return Suggestions.find({project: Session.get('selectedProject')}, {
                 sort: {score: -1},
                 limit: 30
             }).fetch();
         },
 
         NewSuggestion: function() {
-            return Suggestions.find({}, {
+            return Suggestions.find({project: Session.get('selectedProject')}, {
                 sort: {time: -1},
                 limit: 30
             })
@@ -41,14 +44,27 @@ if (Meteor.isClient) {
                 return;
             Suggestions.insert({ // @todo if already in db, just increment score
                 time: new Date(),
-                text: template.find("#newSuggestion").value,
+                text: template.find('#newSuggestion').value,
                 score: 0,
-                category: null // for later
+                project: Session.get('selectedProject')
             });
-            template.find("#newSuggestion").value = ""; // Empty field
+            template.find('#newSuggestion').value = ''; // Empty field
         }
     });
 
+    Template.Projects.helpers({
+       Project : function(){
+           return Projects.find();
+       }
+    });
+
+
+    Template.Projects.events({
+        'change #selectedProject' : function(event, template){
+            Session.set('selectedProject', template.find('#selectedProject').value);
+        }
+    });
 }
+
 
 

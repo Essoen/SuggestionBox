@@ -21,7 +21,7 @@
 </body>
 
 <template name="Suggest">
-    <input type="text" id="newSuggestion" value=""> <button>Suggest it!</button> {{> Categories }}
+    <input type="text" id="newSuggestion" value=""> <button>Suggest it!</button> {{> Projects }}
 </template>
 
 <template name="Suggestions">
@@ -48,6 +48,13 @@
     </div>
 </template>
 
-<template name="Categories">
+<template name="Projects">
+    <!-- Drop down with the project-objects, name shown. The rest of the app reacts on change  -->
+    <select id="selectedProject">
+        <option value="null"></option>
+        {{#each Project}}
+            <option value="{{_id}}"> {{name}}</option>
+        {{/each}}
+    </select>
 
 </template>
