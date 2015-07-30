@@ -9,8 +9,8 @@
             <h1>Welcome to SuggestionBox!</h1>
             <p class="lead center">This is an application for giving suggestions, and up- and downvoting them.</p>
         </div>
-        <div class="span10" align="center">{{> Suggest}}</div>
-        <div class="row-fluid">
+        <div class="col-lg-12" align="center">{{> Suggest}}</div>
+        <div class="row">
             {{> yield}}
         </div>
 
@@ -28,7 +28,7 @@
 </template>
 
 <template name="Suggestions">
-    <div class="span6">
+    <div class="col-lg-6">
         <h3>Highest rated</h3>
         <table align="left">
             {{#each Suggestion}}
@@ -39,7 +39,7 @@
         </table>
     </div>
 
-    <div class="span6">
+    <div class="col-lg-6">
         <h3>Latest suggestions</h3>
         <table align="left">
             {{#each NewSuggestion}}
@@ -54,7 +54,7 @@
 <template name="Projects">
     <!-- Drop down with the project-objects, name shown. The rest of the app reacts on change  -->
     <select id="selectedProject">
-        <option value="null"></option>
+        <option value="null"></option> <!-- None is set by default. -->
         {{#each Project}}
             <option value="{{_id}}"> {{name}}</option>
         {{/each}}
