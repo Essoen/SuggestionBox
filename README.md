@@ -5,7 +5,7 @@ A simple web application where people can post suggestions, and these suggestion
 1. Install [Meteor](https://www.meteor.com/) 
 2. Get all the files and start the server:
 ```bash
-$ git clone git@github.com:Essoen/SugggestionBox.git
-$ cd SuggestionBox
+$ git clone git@github.com:Essoen/suggest.git
+$ cd suggest
 $ meteor
 ```

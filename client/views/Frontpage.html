@@ -1,14 +1,20 @@
-
+<template name="Frontpage">
+    <div class="col-lg-12" align="center">{{> Projects}}</div>
+    <!-- Some overview thingy should be here, not just a gotoproject-thing-->
+</template>
 
 <template name="Suggest">
-    <label for="new-suggestion-title">Title:</label>
-    <input type="text" id="new-suggestion-title" value=""> {{> Projects }}<br>
-    <label for="new-suggestion-content">Your suggestion:</label>
-    <textarea id="new-suggestion-content"></textarea>
-    <button>Suggest it!</button>
+    <div class="col-lg-12" align="center">
+        <label for="new-suggestion-title">Title:</label>
+        <input type="text" id="new-suggestion-title" value="">
+        <label for="new-suggestion-content">Your suggestion:</label>
+        <textarea id="new-suggestion-content"></textarea>
+        <button id="suggest">Suggest it!</button>
+    </div>
 </template>
 
 <template name="Suggestions">
+    {{> Suggest projectId=projectId}}
     <div class="col-lg-6">
         <h3>Highest rated</h3>
         <table align="left">
@@ -33,12 +39,5 @@
 </template>
 
 <template name="Projects">
-    <!-- Drop down with the project-objects, name shown. The rest of the app reacts on change  -->
-    <select id="selectedProject">
-        <option value="null"></option> <!-- None is set by default. -->
-        {{#each Project}}
-            <option value="{{_id}}"> {{name}}</option>
-        {{/each}}
-    </select>
-
+    <h4>Goto project:  |{{#each Project }} <a href="projects/{{_id}}">{{name}}</a> | {{/each}}</h4>
 </template>
