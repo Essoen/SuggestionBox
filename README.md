@@ -1,4 +1,4 @@
-# SuggestionBox
+# suggest
 A simple web application where people can post suggestions, and these suggestions can be voted up and/or down by other users.
 
 ## Todo
