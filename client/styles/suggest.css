@@ -15,3 +15,8 @@
 .alignright{
     float: right;
 }
+
+.downvote-button {
+    margin-left: 2px;
+    margin-right: 5px;
+}

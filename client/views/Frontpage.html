@@ -20,10 +20,10 @@
         <table align="left">
             {{#each Suggestion}}
             <tr>
-              <button class="btn btn-sm btn-success" id="upVote">
+              <button class="btn btn-sm btn-success upvote-button">
                 <span class="glyphicon glyphicon-thumbs-up"></span>
               </button>
-              <button class="btn btn-sm btn-danger" id="downVote">
+              <button class="btn btn-sm btn-danger downvote-button">
                 <span class="glyphicon glyphicon-thumbs-down"></span>
               </button><td><b>{{score}}</b></td> <td>  {{title}}</td>
               </tr>
@@ -36,10 +36,10 @@
         <table align="left">
             {{#each NewSuggestion}}
                 <tr>
-                  <button class="btn btn-sm btn-success" id="upVote">
+                  <button class="btn btn-sm btn-success upvote-button">
                     <span class="glyphicon glyphicon-thumbs-up"></span>
                   </button>
-                  <button class="btn btn-sm btn-danger" id="downVote">
+                  <button class="btn btn-sm btn-danger downvote-button">
                     <span class="glyphicon glyphicon-thumbs-down"></span>
                   </button><td><b>{{score}}</b></td> <td>  {{title}}</td>
                 </tr>

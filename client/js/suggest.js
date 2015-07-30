@@ -15,7 +15,7 @@ Template.Suggestions.helpers({
 });
 
 Template.Suggestions.events({
-    'click #upVote' : function(event, template) {
+    'click .upvote-button' : function(event, template) {
         Suggestions.update({_id: this._id}, {
             $set: {
                 score: this.score + 1
@@ -23,7 +23,7 @@ Template.Suggestions.events({
         });
     },
 
-    'click #downVote' : function(event, template){
+    'click .downvote-button' : function(event, template){
         Suggestions.update({_id: this._id}, {
             $set: {
                 score: this.score - 1
