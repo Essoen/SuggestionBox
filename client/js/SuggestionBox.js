@@ -35,12 +35,11 @@ Template.Suggestions.events({
 });
 
 Template.Suggest.events({
-    'click button, keypress.message': function (event, template) {
-        if(event.type === 'keypress'  && event.which !== 13)
-            return;
+    'click button': function (event, template) {
         Suggestions.insert({ // @todo if already in db, just increment score
             time: new Date(),
-            text: template.find('#newSuggestion').value,
+            title: template.find('#new-suggestion-title').value,
+            content: template.find('#new-suggestion-content').value,
             score: 0,
             project: Session.get('selectedProject')
         });

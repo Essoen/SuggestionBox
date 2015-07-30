@@ -1,0 +1,44 @@
+
+
+<template name="Suggest">
+    <label for="new-suggestion-title">Title:</label>
+    <input type="text" id="new-suggestion-title" value=""> {{> Projects }}<br>
+    <label for="new-suggestion-content">Your suggestion:</label>
+    <textarea id="new-suggestion-content"></textarea>
+    <button>Suggest it!</button>
+</template>
+
+<template name="Suggestions">
+    <div class="col-lg-6">
+        <h3>Highest rated</h3>
+        <table align="left">
+            {{#each Suggestion}}
+            <tr>
+                <button id="upVote">Vote up</button><button id="downVote"> Vote down</button><td><b>{{score}}</b></td> <td>{{title}}</td>
+            </tr>
+            {{/each}}
+        </table>
+    </div>
+
+    <div class="col-lg-6">
+        <h3>Latest suggestions</h3>
+        <table align="left">
+            {{#each NewSuggestion}}
+                <tr>
+                    <button id="upVote">Vote up</button><button id="downVote"> Vote down</button><td><b>{{score}}</b></td> <td>  {{title}}</td>
+                </tr>
+            {{/each}}
+        </table>
+    </div>
+</template>
+
+<template name="Projects">
+    <!-- Drop down with the project-objects, name shown. The rest of the app reacts on change  -->
+    <select id="selectedProject">
+        <option value="null"></option> <!-- None is set by default. -->
+        {{#each Project}}
+            <option value="{{_id}}"> {{name}}</option>
+        {{/each}}
+    </select>
+
+</template>
