@@ -9,4 +9,4 @@ accounts-ui
 accounts-google
 accounts-password
 iron:router
-mrt:bootstrap-3
+mizzao:bootstrap-3
