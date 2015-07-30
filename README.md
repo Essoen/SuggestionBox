@@ -16,6 +16,6 @@ Simply a web application where people can post suggestions, and these suggestion
 2. Get all the files and start the server:
 ```bash
 $ git clone git@github.com:Essoen/SugggestionBox.git
-$ cd MeteorChat
+$ cd SuggestionBox
 $ meteor
 ```
