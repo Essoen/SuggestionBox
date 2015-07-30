@@ -1,5 +1,5 @@
 # SuggestionBox
-Simply a web application where people can post suggestions, and these suggestions can be voted up and/or down by other users.
+A simple web application where people can post suggestions, and these suggestions can be voted up and/or down by other users.
 
 ## Todo
 * Login so one can only vote once per suggestion 
