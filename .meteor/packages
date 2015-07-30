@@ -7,9 +7,8 @@
 meteor-platform
 autopublish
 insecure
-bootstrap
-cmather:iron-router
 accounts-ui
 accounts-google
 accounts-password
 iron:router
+mrt:bootstrap-3

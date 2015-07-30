@@ -1,24 +1,27 @@
-<head>
-    <title>SuggestionBox</title>
-</head>
+<template name="MainLayout">
+    <head>
+        <title>SuggestionBox</title>
+    </head>
 
-<body>
-<div class="container">
-    <div class="page-header">
-        <h1>Welcome to SuggestionBox!</h1>
-        <p class="lead center">This is an application for giving suggestions, and up- and downvoting them.</p>
-    </div>
-    <div class="span10" align="center">{{> Suggest}}</div>
-    <div class="row-fluid">
-        {{> Suggestions}}
-    </div>
+    <body>
+    <div class="container">
+        <div class="page-header">
+            <h1>Welcome to SuggestionBox!</h1>
+            <p class="lead center">This is an application for giving suggestions, and up- and downvoting them.</p>
+        </div>
+        <div class="span10" align="center">{{> Suggest}}</div>
+        <div class="row-fluid">
+            {{> yield}}
+        </div>
 
-    <div id="footer" >
-        <p>Powered by <a href="http://meteor.com">Meteor</a>
-            and made by <a href="mailto:steinotto.svorstol@gmail.com">Stein-Otto Svorstøl</a></p>
+        <div id="footer" >
+            <p>Powered by <a href="http://meteor.com">Meteor</a>
+                and made by <a href="mailto:steinotto.svorstol@gmail.com">Stein-Otto Svorstøl</a></p>
+        </div>
     </div>
-</div>
-</body>
+    </body>
+
+</template>
 
 <template name="Suggest">
     <input type="text" id="newSuggestion" value=""> <button>Suggest it!</button> {{> Projects }}
