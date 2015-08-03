@@ -1,3 +1,6 @@
+/**
+ * Created by esso on 03.08.15.
+ */
 Template.Suggestions.helpers({
     Suggestion: function() {
         return Suggestions.find({project: this.projectId}, {
@@ -33,7 +36,7 @@ Template.Suggestions.events({
 });
 
 Template.Suggest.events({
-        'click #suggest': function (event, template) {
+    'click #suggest': function (event, template) {
         Suggestions.insert({ // @todo if already in db, just increment score
             time: new Date(),
             title: template.find('#new-suggestion-title').value,
@@ -46,18 +49,13 @@ Template.Suggest.events({
     }
 });
 
-Template.Projects.helpers({
-   Project : function(){
-       return Projects.find();
+
+Template.PostComment.events({
+   'click #save': function(event, template){
+       Comments.insert({
+           suggestionId: this.suggestionId,
+           username: template.find('#username').value,
+           comment: template.find('#comment').value
+       });
    }
 });
-
-
-Template.Projects.events({
-    'change #selectedProject' : function(event, template){
-        Session.set('selectedProject', template.find('#selectedProject').value);
-    }
-});
-
-
-

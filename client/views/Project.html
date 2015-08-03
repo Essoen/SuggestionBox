@@ -6,3 +6,40 @@
     </div>
     {{> Suggestions projectId=_id}}
 </template>
+
+<template name="Suggestions">
+    {{> Suggest projectId=projectId}}
+    <div class="col-lg-6">
+        <h3>Highest rated</h3>
+        <table align="left">
+            {{#each Suggestion}}
+            <tr>
+                <button class="btn btn-sm btn-success upvote-button">
+                    <span class="glyphicon glyphicon-thumbs-up"></span>
+                </button>
+                <button class="btn btn-sm btn-danger downvote-button">
+                    <span class="glyphicon glyphicon-thumbs-down"></span>
+                </button><td><b>{{score}}</b></td>
+                <td><a href="{{../projectId}}/{{_id}}">{{title}}</a></td>
+            </tr>
+            {{/each}}
+        </table>
+    </div>
+
+    <div class="col-lg-6">
+        <h3>Latest suggestions</h3>
+        <table align="left">
+            {{#each NewSuggestion}}
+            <tr>
+                <button class="btn btn-sm btn-success upvote-button">
+                    <span class="glyphicon glyphicon-thumbs-up"></span>
+                </button>
+                <button class="btn btn-sm btn-danger downvote-button">
+                    <span class="glyphicon glyphicon-thumbs-down"></span>
+                </button><td><b>{{score}}</b></td>
+                <td><a href="{{../projectId}}/{{_id}}">{{title}}</a></td>
+            </tr>
+            {{/each}}
+        </table>
+    </div>
+</template>

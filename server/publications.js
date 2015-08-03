@@ -23,3 +23,11 @@ Projects.allow({
 Meteor.publish(null, function(){
     return Projects.find({})
 });
+
+Comments.allow({
+    'insert': function(object){ return true; }
+});
+
+Meteor.publish(null, function(){
+    return Comments.find({});
+});

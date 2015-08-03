@@ -1,0 +1,23 @@
+<template name="Suggestion">
+
+    <div class="col-lg-12" >
+
+        <h4>{{Suggestion.title}}</h4>
+        <p>{{Suggestion.content}}</p>
+
+        {{> PostComment suggestionId=Suggestion._id}}
+
+        {{#each Comments}}
+            <strong>{{username}}: </strong> {{{comment}}}<br><br>
+        {{/each}}
+    </div>
+</template>
+
+
+<template name="PostComment">
+    <h4>Post a comment</h4>
+    <label for="username">Username: </label> <input type="text" id="username" value=""> <button id="save">Publish!</button> <br>
+    <textarea id="comment" placeholder="Enter a comment .." cols="30" ></textarea>
+    <p>HTML is allowed.</p>
+</template>
+
