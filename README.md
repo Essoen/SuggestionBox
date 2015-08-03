@@ -1,5 +1,9 @@
 # suggest
-A simple web application where people can post suggestions, and these suggestions can be voted up and/or down by other users.
+A webapp that lets users suggest things for different projects.
+
+The aim is to be a channel for communication between developers and users,
+in organizations where the users aren't familiar with GitHub Issues and other trackers,
+but still want a simple way to have an impact on what's being developed.
 
 ## Installation
 1. Install [Meteor](https://www.meteor.com/) 
