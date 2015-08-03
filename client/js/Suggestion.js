@@ -42,6 +42,7 @@ Template.Suggest.events({
             title: template.find('#new-suggestion-title').value,
             content: template.find('#new-suggestion-content').value,
             score: 0,
+            status: 'New',
             project: this.projectId
         });
         template.find('#new-suggestion-title').value = ''; // Empty field

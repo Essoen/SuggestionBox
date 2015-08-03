@@ -32,6 +32,7 @@ A `Suggestion`:
         time: Date,
         title: String,
         content: String,
+        status: String
         score: Integer,
         project: String ID
     }
