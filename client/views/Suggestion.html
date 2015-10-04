@@ -1,7 +1,13 @@
 <template name="Suggestion">
-
+    <div class="col-md-12">
+        <a href="/projects/{{Suggestion.project}}">
+            <button class="btn btn-default">
+                <span class="glyphicon glyphicon-arrow-left"></span>
+                Back to project
+            </button>
+        </a>
+    </div>
     <div class="col-lg-6" >
-
         <h4>{{Suggestion.title}}</h4>
         <p>{{Suggestion.content}}</p>
 
