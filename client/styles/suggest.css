@@ -16,6 +16,20 @@
     float: right;
 }
 
+/*
+Put dropdown contents to center of page, as align="center" doesn't work
+*/
+.dropdown-menu {
+  left: 50%;
+  right: auto;
+  text-align: center;
+  transform: translate(-50%, 0);
+}
+
+.project-dropdown-title {
+    font-size: 1.5em;
+}
+
 .downvote-button {
     margin-left: 2px;
     margin-right: 5px;

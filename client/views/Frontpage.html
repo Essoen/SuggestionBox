@@ -16,5 +16,17 @@
 
 
 <template name="Projects">
-    <h4>Goto project:  |{{#each Project }} <a href="projects/{{_id}}">{{name}}</a> | {{/each}}</h4>
+    <h1>Go to project:</h1>
+    <div class="dropdown">
+        <button class="btn btn-default btn-lg" type="button" id="projectDropDown"
+        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        Choose
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="projectDropDown">
+        {{#each Project}}
+        <li><a class="project-dropdown-title" href="projects/{{_id}}">{{name}}</a></li>
+        {{/each}}
+    </ul>
+</div>
 </template>
