@@ -26,10 +26,12 @@
 
     <div class="col-lg-6 col-md-6">
         <h3>Comments</h3>
+        <hr>
         {{#each Comments}}
-        <p><strong>{{username}}: </strong> {{{comment}}}</p>
+        <h5>By: {{username}}</h5>
+        <p>{{{comment}}}</p>
+        <hr>
         {{/each}}
-
         {{> PostComment suggestionId=Suggestion._id}}
     </div>
 </template>
