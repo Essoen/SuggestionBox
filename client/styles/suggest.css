@@ -7,15 +7,6 @@
     bottom: -50px;
 }
 
-.aligncenter{
-    float: center;
-    text-align: center;
-}
-
-.alignright{
-    float: right;
-}
-
 /*
 Put dropdown contents to center of page, as align="center" doesn't work
 */
