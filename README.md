@@ -9,7 +9,7 @@ but still want a simple way to have an impact on what's being developed.
 1. Install [Meteor](https://www.meteor.com/) 
 2. Get all the files and start the server:
 ```bash
-$ git clone git@github.com:Essoen/suggest.git
+$ git clone git@github.com:essoen/suggest.git
 $ cd suggest
 $ meteor
 ```
