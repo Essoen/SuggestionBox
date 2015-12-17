@@ -34,3 +34,7 @@ Put dropdown contents to center of page, as align="center" doesn't work
     margin-left: 2px;
     margin-right: 5px;
 }
+
+.suggestion-list {
+    padding: 10px;
+}
