@@ -17,19 +17,19 @@ Template.Suggestions.helpers({
     }
 });
 
-Template.Suggestions.events({
+Template.Suggestion.events({
     'click .upvote-button' : function(event, template) {
-        Suggestions.update({_id: this._id}, {
+        Suggestions.update({_id: this.Suggestion._id}, {
             $set: {
-                score: this.score + 1
+                score: this.Suggestion.score + 1
             }
         });
     },
 
     'click .downvote-button' : function(event, template){
-        Suggestions.update({_id: this._id}, {
+        Suggestions.update({_id: this.Suggestion._id}, {
             $set: {
-                score: this.score - 1
+                score: this.Suggestion.score - 1
             }
         })
     }
